@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+    redis_db:
+        image: "redis:alpine"
+        ports:
+            - "8080:6379"
+    web:
+        container_name: node-app
+        build: ./node-app
+        ports:
+            - "3000:3000"
